@@ -29,19 +29,21 @@ $routes->get('/updatepage3/(:any)', 'C_Page::updatepage3/$1');
 $routes->post('/aksiupdatepage3', 'C_Page::aksiupdatepage3');
 $routes->get('/deletepage3/(:any)', 'C_Page::deletepage3/$1');
 
-// page 4
-$routes->get('/page4', 'C_Page::page4');
-$routes->post('/aksipage4', 'C_Page::aksipage4');
-$routes->get('/updatepage4/(:any)', 'C_Page::updatepage4/$1');
-$routes->post('/aksiupdatepage4', 'C_Page::aksiupdatepage4');
-$routes->get('/deletepage4/(:any)', 'C_Page::deletepage4/$1');
+// event
+$routes->get('/berita', 'C_Berita::berita');
+$routes->get('/detailberita/(:any)', 'C_Berita::detailberita/$1');
+$routes->get('/event', 'C_Berita::event');
+$routes->post('/aksievent', 'C_Berita::aksievent');
+$routes->get('/updateevent/(:any)', 'C_Berita::updateevent/$1');
+$routes->post('/aksiupdateevent', 'C_Berita::aksiupdateevent');
+$routes->get('/deleteevent/(:any)', 'C_Berita::deleteevent/$1');
 
-// event 
-$routes->get('/event', 'C_Page::event');
-$routes->post('/aksievent', 'C_Page::aksievent');
-$routes->get('/updateevent/(:any)', 'C_Page::updateevent/$1');
-$routes->post('/aksiupdateevent', 'C_Page::aksiupdateevent');
-$routes->get('/deleteevent/(:any)', 'C_Page::deleteevent/$1');
+// page 4
+$routes->get('/page4', 'C_Berita::page4');
+$routes->post('/aksipage4', 'C_Berita::aksipage4');
+$routes->get('/updatepage4/(:any)', 'C_Berita::updatepage4/$1');
+$routes->post('/aksiupdatepage4', 'C_Berita::aksiupdatepage4');
+$routes->get('/deletepage4/(:any)', 'C_Berita::deletepage4/$1');
 
 // page 5
 $routes->get('/page5', 'C_Page::page5');
@@ -69,3 +71,4 @@ $routes->get('/logout', 'C_Login::logout');
 
 //home
 $routes->get('/', 'Home::home');
+$routes->get('/about', 'Home::about');

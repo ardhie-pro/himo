@@ -64,4 +64,17 @@ class Home extends BaseController
         $data['title'] = 'Himo Sidoarjo';
         return view('himocontent/home', $data);
     }
+    public function about()
+    {
+        $data['page1'] = $this->page1->findAll(1);
+        $data['page2'] = $this->page2->findAll(1);
+        $data['page3'] = $this->page3->findAll(1);
+        $data['page4'] = $this->page4->findAll(1);
+        $data['event'] = $this->event->findAll();
+        $data['page5'] = $this->page5->findAll(1);
+        $data['gambar'] = $this->gambar->findAll();
+
+        $data['title'] = 'Himo Sidoarjo';
+        return view('himocontent/about', $data);
+    }
 }

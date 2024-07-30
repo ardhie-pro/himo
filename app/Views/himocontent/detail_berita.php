@@ -1,7 +1,23 @@
-<?= $this->extend('layout/template'); ?>
+<?= $this->extend('layout/himotemp'); ?>
 
-<?= $this->section('content'); ?>
+<?= $this->section('contenthimo'); ?>
 
+<?php
+foreach ($page1 as $pg1) {
+?>
+    <section class="site-hero overlay" style="background-image: url(<?= base_url($pg1['gambar']); ?>)" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row site-hero-inner justify-content-center align-items-center">
+                <div class="col-md-10 text-center" data-aos="fade-up">
+                    <span class="custom-caption text-uppercase text-white d-block  mb-3"><?= $pg1['text1']; ?><span class="text-primary"></span>DI HIMOSDA</span>
+                    <h1 class="heading"><?= $pg1['text2']; ?></h1>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+<?php } ?>
 
 <section class="blog_area single-post-area section-padding">
     <div class="container">
@@ -10,21 +26,17 @@
             <div class="col-lg-8 posts-list">
                 <div class="single-post">
                     <?php
-                    foreach ($berita as $brt) {
-                    ?>
+                    foreach ($event as $pg) { ?>
                         <div class="feature-img">
-                            <img class="card-img rounded-0" src="<?= $brt['berita_gambar']; ?>" alt="">
+                            <img class="card-img rounded-0" src="<?= base_url($pg['gambar']); ?>" alt="">
                         </div>
                         <div class="blog_details">
-                            <h2><?= $brt['berita_judul']; ?></h2>
-                            <ul class="blog-info-link mt-3 mb-4">
-                                <li><a href="#"><i class="bi bi-bookmarks-fill"></i> <?= $brt['kat_berita']; ?> </a></li>
-                                <li><a href="#"><i class="bi bi-person-lines-fill"></i> INFOCOM </a></li>
-                            </ul>
-                            <p><?= $brt['berita_isi']; ?></p>
-
-
-
+                            <h2><?= $pg['text2']; ?><h2>
+                                    <ul class="blog-info-link mt-3 mb-4">
+                                        <li><a href="#"><i class="bi bi-bookmarks-fill"></i> <?= $pg['text1']; ?> </a></li>
+                                        <li><a href="#"><i class="bi bi-person-lines-fill"></i> INFOCOM </a></li>
+                                    </ul>
+                                    <p><?= $pg['text1']; ?></p>
                         </div>
                     <?php } ?>
                 </div>

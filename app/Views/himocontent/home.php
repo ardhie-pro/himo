@@ -4,24 +4,24 @@
 <?php
 foreach ($page1 as $pg) {
 ?>
-    <section class="site-hero overlay" style="background-image: url(<?= base_url($pg['gambar']); ?>)" data-stellar-background-ratio="0.5">
-        <div class="container">
-            <div class="row site-hero-inner justify-content-center align-items-center">
-                <div class="col-md-10 text-center" data-aos="fade-up">
-                    <span class="custom-caption text-uppercase text-white d-block  mb-3"><?= $pg['text1']; ?><span class="text-primary"></span>DI HIMOSDA</span>
-                    <h1 class="heading"><?= $pg['text2']; ?></h1>
+    <div class="mb-5">
+        <section class="site-hero overlay" style="background-image: url(<?= base_url($pg['gambar']); ?>)" data-stellar-background-ratio="0.5">
+            <div class="container">
+                <div class="row site-hero-inner justify-content-center align-items-center">
+                    <div class="col-md-10 text-center" data-aos="fade-up">
+                        <span class="custom-caption text-uppercase text-white d-block  mb-3"><?= $pg['text1']; ?><span class="text-primary"></span>DI HIMOSDA</span>
+                        <h1 class="heading"><?= $pg['text2']; ?></h1>
+                    </div>
                 </div>
             </div>
-        </div>
-
-
-    </section>
+        </section>
+    </div>
 <?php } ?>
 <!-- END section -->
 <?php
 foreach ($page2 as $pg) {
 ?>
-    <section class="section bg-light pb-0">
+    <section class="section bg-light pb-0 mt-5">
         <div class="container">
 
             <div class="row check-availabilty" id="next">
@@ -76,13 +76,10 @@ foreach ($page3 as $pg) { ?>
 <section class="section blog-post-entry ">
     <div class="container">
         <div class="row justify-content-center text-center mb-5">
-            <?php
-            foreach ($page4 as $pg) { ?>
-                <div class="col-md-7">
-                    <h2 class="heading" data-aos="fade-up">Berita Terkini</h2>
-                    <p data-aos="fade-up">Himpunan Musyawarah Osis Sidoarjo</p>
-                </div>
-            <?php } ?>
+            <div class="col-md-7">
+                <h2 class="heading" data-aos="fade-up">Berita Terkini</h2>
+                <p data-aos="fade-up">Himpunan Musyawarah Osis Sidoarjo</p>
+            </div>
         </div>
         <div class="row">
             <?php
@@ -90,17 +87,17 @@ foreach ($page3 as $pg) { ?>
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="100">
 
                     <div class="media media-custom d-block mb-4 h-100">
-                        <a href="#" class="mb-4 d-block"><img src="<?= base_url($pg['gambar']); ?>" alt="Image placeholder" class="img-fluid"></a>
+                        <a href="<?= base_url('detailberita/' . $pg['gambar_judul']) ?>" class="mb-4 d-block"><img src="<?= base_url($pg['gambar']); ?>" alt="Image placeholder" class="img-fluid"></a>
                         <div class="media-body">
                             <span class="meta-post"><?= $pg['text1']; ?></span>
-                            <h2 class="mt-0 mb-3"><a href="#"><?= $pg['text2']; ?></a></h2>
+                            <h2 class="mt-0 mb-3"><a href="<?= base_url('detailberita/' . $pg['gambar_judul']) ?>"><?= $pg['text2']; ?></a></h2>
                             <p><?= $pg['text3']; ?></p>
                         </div>
                     </div>
 
                 </div>
             <?php } ?>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="200">
+            <!-- <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="200">
                 <div class="media media-custom d-block mb-4 h-100">
                     <a href="#" class="mb-4 d-block"><img src="<?= base_url('himo/images/DSCF2216.JPG') ?>" alt="Image placeholder" class="img-fluid"></a>
                     <div class="media-body">
@@ -119,7 +116,7 @@ foreach ($page3 as $pg) { ?>
                         <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. t is a paradisematic country, in which roasted parts of sentences.</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>
@@ -128,15 +125,10 @@ foreach ($page3 as $pg) { ?>
 <section class="section slider-section bg-light">
     <div class="container">
         <div class="row justify-content-center text-center mb-5">
-            <?php
-            foreach ($page5 as $pg) {
-            ?>
-                <div class="col-md-7">
-                    <h2 class="heading" data-aos="fade-up">Galery</h2>
-                    <p data-aos="fade-up" data-aos-delay="100">Dokumentasi berikut merinci aktivitas kami selama periode bertugas serta berbagai event yang telah kami organisir.</p>
-                </div>
-            <?php
-            } ?>
+            <div class="col-md-7">
+                <h2 class="heading" data-aos="fade-up">Galery</h2>
+                <p data-aos="fade-up" data-aos-delay="100">Dokumentasi berikut merinci aktivitas kami selama periode bertugas serta berbagai event yang telah kami organisir.</p>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -145,10 +137,10 @@ foreach ($page3 as $pg) { ?>
                     foreach ($gambar as $pg) {
                     ?>
                         <div class="slider-item">
-                            <a href="<?= base_url($pg['gambar']); ?>" data-fancybox="images" data-caption="Caption for this image"><img src="<?= base_url($pg['gambar']) ?>" alt="Image placeholder" class="img-fluid"></a>
+                            <a href="" data-fancybox="images" data-caption="Caption for this image"><img src="<?= base_url($pg['gambar']) ?>" style="max-width: 400px" alt="Image placeholder" class="img-fluid"></a>
                         </div>
                     <?php } ?>
-                    <div class="slider-item">
+                    <!-- <div class="slider-item">
                         <a href="images/DSC04537.JPG" data-fancybox="images" data-caption="Caption for this image"><img src="<?= base_url('himo/images/DSC04537.JPG') ?>" alt="Image placeholder" class="img-fluid"></a>
                     </div>
                     <div class="slider-item">
@@ -159,7 +151,7 @@ foreach ($page3 as $pg) { ?>
                     </div>
                     <div class="slider-item">
                         <a href="images/IMG_7442.jpg" data-fancybox="images" data-caption="Caption for this image"><img src="<?= base_url('himo/images/IMG_7442.jpg') ?>" alt="Image placeholder" class="img-fluid"></a>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- END slider -->
             </div>
@@ -174,59 +166,32 @@ foreach ($page3 as $pg) { ?>
     <div class="container">
         <div class="row justify-content-center text-center mb-5">
             <div class="col-md-7">
-                <h2 class="heading text-white" data-aos="fade">Target Kami</h2>
-                <p class="text-white" data-aos="fade" data-aos-delay="100">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                <h2 class="heading text-white" data-aos="fade">Agenda Kami</h2>
+                <p class="text-white" data-aos="fade" data-aos-delay="100">Rancangan atau daftar kegiatan, tugas, atau acara yang akan <br>dilakukan HIMOSDA dalam periode 2024 - 2025.</p>
             </div>
         </div>
         <div class="food-menu-tabs" data-aos="fade">
             <ul class="nav nav-tabs mb-5" id="myTab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active letter-spacing-2" id="mains-tab" data-toggle="tab" href="#mains" role="tab" aria-controls="mains" aria-selected="true">Harian</a>
+                    <a class="nav-link active letter-spacing-2" id="harian-tab" data-toggle="tab" href="#harian" role="tab" aria-controls="harian" aria-selected="true">Harian</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link letter-spacing-2" id="desserts-tab" data-toggle="tab" href="#desserts" role="tab" aria-controls="desserts" aria-selected="false">Bulanan</a>
+                    <a class="nav-link letter-spacing-2" id="bulanan-tab" data-toggle="tab" href="#bulanan" role="tab" aria-controls="bulanan" aria-selected="false">Bulanan</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link letter-spacing-2" id="drinks-tab" data-toggle="tab" href="#drinks" role="tab" aria-controls="drinks" aria-selected="false">Tahunan</a>
+                    <a class="nav-link letter-spacing-2" id="tahunan-tab" data-toggle="tab" href="#tahunan" role="tab" aria-controls="tahunan" aria-selected="false">Tahunan</a>
                 </li>
             </ul>
             <div class="tab-content py-5" id="myTabContent">
 
 
-                <div class="tab-pane fade show active text-left" id="mains" role="tabpanel" aria-labelledby="mains-tab">
+                <div class="tab-pane fade show active text-left" id="harian" role="tabpanel" aria-labelledby="harian-tab">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="food-menu mb-5">
-                                <span class="d-block text-primary h4 mb-3">$20.00</span>
-                                <h3 class="text-white"><a href="#" class="text-white">Murgh Tikka Masala</a></h3>
-                                <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
-                            <div class="food-menu mb-5">
-                                <span class="d-block text-primary h4 mb-3">$35.00</span>
-                                <h3 class="text-white"><a href="#" class="text-white">Fish Moilee</a></h3>
-                                <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
-                            <div class="food-menu mb-5">
-                                <span class="d-block text-primary h4 mb-3">$15.00</span>
-                                <h3 class="text-white"><a href="#" class="text-white">Safed Gosht</a></h3>
-                                <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="food-menu mb-5">
-                                <span class="d-block text-primary h4 mb-3">$10.00</span>
-                                <h3 class="text-white"><a href="#" class="text-white">French Toast Combo</a></h3>
-                                <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
-                            <div class="food-menu mb-5">
-                                <span class="d-block text-primary h4 mb-3">$8.35</span>
-                                <h3 class="text-white"><a href="#" class="text-white">Vegie Omelet</a></h3>
-                                <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
-                            <div class="food-menu mb-5">
-                                <span class="d-block text-primary h4 mb-3">$22.00</span>
-                                <h3 class="text-white"><a href="#" class="text-white">Chorizo &amp; Egg Omelet</a></h3>
-                                <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <span class="d-block text-primary h4 mb-3">tanggal(17 june 2007)</span>
+                                <h3 class="text-white"><a href="#" class="text-white">(Judul) tanggal lahir web developer</a></h3>
+                                <p class="text-white text-opacity-7">(descripsi)Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                             </div>
                         </div>
                     </div>
@@ -234,78 +199,24 @@ foreach ($page3 as $pg) { ?>
 
                 </div> <!-- .tab-pane -->
 
-                <div class="tab-pane fade text-left" id="desserts" role="tabpanel" aria-labelledby="desserts-tab">
+                <div class="tab-pane fade text-left" id="bulanan" role="tabpanel" aria-labelledby="bulanan-tab">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="food-menu mb-5">
-                                <span class="d-block text-primary h4 mb-3">$11.00</span>
-                                <h3 class="text-white"><a href="#" class="text-white">Banana Split</a></h3>
-                                <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
-                            <div class="food-menu mb-5">
-                                <span class="d-block text-primary h4 mb-3">$72.00</span>
-                                <h3 class="text-white"><a href="#" class="text-white">Sticky Toffee Pudding</a></h3>
-                                <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
-                            <div class="food-menu mb-5">
-                                <span class="d-block text-primary h4 mb-3">$26.00</span>
-                                <h3 class="text-white"><a href="#" class="text-white">Pecan</a></h3>
-                                <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="food-menu mb-5">
-                                <span class="d-block text-primary h4 mb-3">$42.00</span>
-                                <h3 class="text-white"><a href="#" class="text-white">Apple Strudel</a></h3>
-                                <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
-                            <div class="food-menu mb-5">
-                                <span class="d-block text-primary h4 mb-3">$7.35</span>
-                                <h3 class="text-white"><a href="#" class="text-white">Pancakes</a></h3>
-                                <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
-                            <div class="food-menu mb-5">
-                                <span class="d-block text-primary h4 mb-3">$22.00</span>
-                                <h3 class="text-white"><a href="#" class="text-white">Ice Cream Sundae</a></h3>
-                                <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <span class="d-block text-primary h4 mb-3">tanggal(17 june 2007)</span>
+                                <h3 class="text-white"><a href="#" class="text-white">(Judul) tanggal lahir web developer</a></h3>
+                                <p class="text-white text-opacity-7">(descripsi)Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                             </div>
                         </div>
                     </div>
                 </div> <!-- .tab-pane -->
-                <div class="tab-pane fade text-left" id="drinks" role="tabpanel" aria-labelledby="drinks-tab">
+                <div class="tab-pane fade text-left" id="tahunan" role="tabpanel" aria-labelledby="tahunan-tab">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="food-menu mb-5">
-                                <span class="d-block text-primary h4 mb-3">$32.00</span>
-                                <h3 class="text-white"><a href="#" class="text-white">Spring Water</a></h3>
-                                <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
-                            <div class="food-menu mb-5">
-                                <span class="d-block text-primary h4 mb-3">$14.00</span>
-                                <h3 class="text-white"><a href="#" class="text-white">Coke, Diet Coke, Coke Zero</a></h3>
-                                <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
-                            <div class="food-menu mb-5">
-                                <span class="d-block text-primary h4 mb-3">$93.00</span>
-                                <h3 class="text-white"><a href="#" class="text-white">Orange Fanta</a></h3>
-                                <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="food-menu mb-5">
-                                <span class="d-block text-primary h4 mb-3">$18.00</span>
-                                <h3 class="text-white"><a href="#" class="text-white">Lemonade, Lemon Squash</a></h3>
-                                <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
-                            <div class="food-menu mb-5">
-                                <span class="d-block text-primary h4 mb-3">$38.35</span>
-                                <h3 class="text-white"><a href="#" class="text-white">Sparkling Mineral Water</a></h3>
-                                <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
-                            <div class="food-menu mb-5">
-                                <span class="d-block text-primary h4 mb-3">$69.00</span>
-                                <h3 class="text-white"><a href="#" class="text-white">Lemon, Lime &amp; Bitters</a></h3>
-                                <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <span class="d-block text-primary h4 mb-3">tanggal(17 june 2007)</span>
+                                <h3 class="text-white"><a href="#" class="text-white">(Judul) tanggal lahir web developer</a></h3>
+                                <p class="text-white text-opacity-7">(descripsi)Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                             </div>
                         </div>
                     </div>
@@ -372,7 +283,7 @@ foreach ($page3 as $pg) { ?>
                 <h2 class="text-white font-weight-bold">Ada Yang Kamu Tanyakan. Gabung Sekarang!</h2>
             </div>
             <div class="col-12 col-md-6 text-center text-md-right" data-aos="fade-up" data-aos-delay="200">
-                <a href="reservation.html" class="btn btn-outline-white-primary py-3 text-white px-5">Reserve Now</a>
+                <a href="" class="btn btn-outline-white-primary py-3 text-white px-5">Subscribe Now</a>
             </div>
         </div>
     </div>
