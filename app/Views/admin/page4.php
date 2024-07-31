@@ -144,12 +144,6 @@
                                             <div class="modal-body">
                                                 <form action="<?= base_url('aksievent') ?>" method="post" enctype="multipart/form-data">
 
-                                                    <div class="form-group">
-                                                        <label>Tanggal</label>
-                                                        <div>
-                                                            <input type="text" name="text1" class="form-control floating-label">
-                                                        </div>
-                                                    </div>
 
                                                     <div class="form-group">
                                                         <label>Judul Berita</label>
@@ -159,9 +153,16 @@
                                                     </div>
 
                                                     <div class="form-group">
+                                                        <label>Tanggal</label>
+                                                        <div>
+                                                            <input type="date" name="text1" class="form-control floating-label">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
                                                         <label>Isi Berita</label>
                                                         <div>
-                                                            <textarea id="elm1" name="area"></textarea>
+                                                            <textarea id="elm1" name="text3"></textarea>
                                                         </div>
                                                     </div>
 

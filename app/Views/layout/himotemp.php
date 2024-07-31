@@ -11,6 +11,7 @@
     <meta name="author" content="" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=|Roboto+Sans:400,700|Playfair+Display:400,700">
     <link href="images/logohimoo.png">
+    <link rel="stylesheet" href="<?= base_url('icon/font/bootstrap-icons.css') ?>">
     <link rel="stylesheet" href="<?= base_url('himo/css/bootstrap.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('himo/css/animate.css') ?>">
     <link rel="stylesheet" href="<?= base_url('himo/css/owl.carousel.min.css') ?>">

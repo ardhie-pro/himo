@@ -5,7 +5,7 @@
 <?php
 foreach ($page1 as $pg1) {
 ?>
-    <section class="site-hero overlay" style="background-image: url(<?= base_url($pg1['gambar']); ?>)" data-stellar-background-ratio="0.5">
+    <section class="site-hero overlay" style="background-image: url(<?= base_url($pg1['gambar']); ?>);" data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row site-hero-inner justify-content-center align-items-center">
                 <div class="col-md-10 text-center" data-aos="fade-up">
@@ -31,12 +31,12 @@ foreach ($page1 as $pg1) {
                             <img class="card-img rounded-0" src="<?= base_url($pg['gambar']); ?>" alt="">
                         </div>
                         <div class="blog_details">
+                            <ul class="blog-info-link mb-4">
+                                <li style="list-style:none;"><a href=""><i class="bi bi-calendar-week"></i> <?= $pg['text1']; ?> </a></li>
+                                <li style="list-style:none;"><a href=""><i class="bi bi-person-lines-fill"></i> Humas HIMOSDA </a></li>
+                            </ul>
                             <h2><?= $pg['text2']; ?><h2>
-                                    <ul class="blog-info-link mt-3 mb-4">
-                                        <li><a href="#"><i class="bi bi-bookmarks-fill"></i> <?= $pg['text1']; ?> </a></li>
-                                        <li><a href="#"><i class="bi bi-person-lines-fill"></i> INFOCOM </a></li>
-                                    </ul>
-                                    <p><?= $pg['text1']; ?></p>
+                                    <p style="color: #6c757d;"><?= $pg['text3']; ?></p>
                         </div>
                     <?php } ?>
                 </div>

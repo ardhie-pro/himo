@@ -19,14 +19,14 @@
                                     <img class="card-img rounded-0" src="<?= base_url($pg['gambar']); ?>" alt="">
                                 </a>
                                 <a href="<?= base_url('detailberita/' . $pg['gambar_judul']) ?>" class="blog_item_date">
-                                    <h3>17 juni 2007</h3>
+                                    <h3><?= $pg['text1']; ?></h3>
                                 </a>
                             </div>
 
                             <div class="media media-custom mt-3 d-block h-100">
                                 <div class="media-body">
-                                    <span class="meta-post"><?= $pg['text1']; ?></span>
-                                    <h2 class="mt-0 mb-3"><a href="#"><?= $pg['text2']; ?></a></h2>
+                                    <!-- <span class="meta-post"></span> -->
+                                    <h2 class="mt-0 mb-3"><a href=""><?= $pg['text2']; ?></a></h2>
                                     <p><?= $pg['text3']; ?></p>
                                 </div>
                             </div>

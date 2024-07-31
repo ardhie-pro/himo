@@ -75,7 +75,7 @@ class C_Berita extends BaseController
         $text2 = $this->request->getPost('text2');
         $text3 = $this->request->getPost('text3');
         $gambar = $this->request->getFile('gambar');
-        $title = trim(strtolower($text1));
+        $title = trim(strtolower($gambar));
         $keluar = explode(" ", $title);
         $slug = implode("-", $keluar);
         $fileName = $gambar->getRandomName();

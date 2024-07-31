@@ -1281,7 +1281,7 @@ textarea.form-control {
 /* line 14, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_blog.scss */
 .blog_area a:hover,
 .blog_area a :hover {
-  background: -webkit-linear-gradient(131deg, #009dff 0%, #009dff 99%);
+  background: -webkit-linear-gradient(131deg, #089fe8 0%, #089fe8 99%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-decoration: none;
@@ -1537,7 +1537,7 @@ textarea.form-control {
   left: 10px;
   display: block;
   color: #fff;
-  background-color: #009dff;
+  background-color: #089fe8;
   padding: 8px 15px;
   border-radius: 5px;
 }
@@ -1617,8 +1617,8 @@ textarea.form-control {
 
 /* line 549, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_blog.scss */
 .blog_details h2 {
-  font-size: 18px;
-  font-weight: 600;
+  /* font-size: 18px; */
+  /* font-weight: 600; */
   margin-bottom: 8px;
 }
 
@@ -1992,7 +1992,7 @@ img {
   margin-bottom: 15px;
 }
 .blog_details h2 {
-  font-size: 18px;
+  /* font-size: 18px; */
   font-weight: 600;
   margin-bottom: 8px;
 }
@@ -2007,13 +2007,13 @@ h6 {
 h2 {
   font-size: 30px;
 }
-h1,
+/* h1,
 h2,
 h3,
 h4,
 h5 {
   font-family: "Rockwell", sans-serif;
-}
+} */
 p {
   color: #0a0a0a;
 }
