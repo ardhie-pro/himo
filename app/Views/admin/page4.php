@@ -1,13 +1,6 @@
 <?= $this->extend('layout/admintemplate'); ?>
 
 <?= $this->section('keuangan'); ?>
-<div class="contant-page">
-    <!-- Start content -->
-    <div class="content">
-
-
-    </div> <!-- content -->
-</div>
 
 <!-- ============================================================== -->
 <!-- Start right Content here -->
@@ -20,12 +13,11 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="page-title-box">
-                        <h4 class="page-title">Halaman Page 4</h4>
+                        <h4 class="page-title">Tambah Berita</h4>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
                                 <div class=" text-center">
-                                    <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#myModal">Buat Title</button>
-                                    <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#myModalevent">Buat Event</button>
+                                    <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#myModalevent">Buat Berita</button>
                                 </div>
                             </li>
                         </ol>
@@ -46,22 +38,22 @@
                                         <form action="<?= base_url('aksiupdateevent') ?>" method="post" enctype="multipart/form-data">
                                             <div class="form-group">
                                                 <div class="form-group">
-                                                    <label>Title</label>
+                                                    <label>Judul Berita</label>
                                                     <div>
                                                         <input type="hidden" name="event_id" class="form-control floating-label" value="<?= $value['event_id']; ?>">
-                                                        <input type="text" name="text1" class="form-control floating-label" value="<?= $value['text2']; ?>">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Deskripsi</label>
-                                                    <div>
-                                                        <textarea id="elm1" name="text3"><?= $value['text3']; ?></textarea>
+                                                        <input type="text" name="text2" class="form-control floating-label" value="<?= $value['text2']; ?>">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Tanggal</label>
                                                     <div>
-                                                        <input type="text" name="text3" class="form-control floating-label" value="<?= $value['text1']; ?>">
+                                                        <input type="date" name="text1" class="form-control floating-label" value="<?= $value['text1']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Isi Berita</label>
+                                                    <div>
+                                                        <textarea id="elm1" name="text3"><?= $value['text3']; ?></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -157,49 +149,35 @@
 
                             <?php endif; ?>
 
-                            <h4 class="mt-0 header-title">User Admin</h4>
+                            <h4 class="mt-0 header-title">Data Berita</h4>
 
                             <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Title</th>
-                                        <th>Deskripsi</th>
+                                        <th>Judul</th>
                                         <th>Tanggal</th>
-                                        <th>Gambar Event</th>
+                                        <th>Isi</th>
+                                        <th>Gambar</th>
                                         <th>Menu</th>
+                                        <th>#</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php
-                                    $no = 1;
-                                    foreach ($page4  as $sw) {
-                                    ?>
-                                        <tr>
-                                            <td><?= $no++ ?></td>
-                                            <td><?= $sw['text1']; ?></td>
-                                            <td><?= $sw['text2']; ?></td>
-                                            <td>null</td>
-                                            <td>null</td>
-                                            <td>
-                                                <a class="btn btn-danger" href="<?= base_url('deletepage4/' . $sw['page4_id']); ?>">Hapus</a>
-                                                <a class="btn btn-warning" href="<?= base_url('updatepage4/' . $sw['page4_id']); ?>">Edit</a>
-                                            </td>
-                                        </tr>
-                                    <?php }  ?>
-
                                     <?php
                                     $no = 1;
                                     foreach ($event  as $sw) {
                                     ?>
                                         <tr>
                                             <td><?= $no++ ?></td>
-                                            <td><?= $sw['text1']; ?></td>
                                             <td><?= $sw['text2']; ?></td>
-                                            <td><?= $sw['text3']; ?></td>
+                                            <td><?= $sw['text1']; ?></td>
+                                            <td><?= substr($sw['text3'], 0, 50); ?></td>
                                             <td><img src="<?= base_url($sw['gambar']); ?>" alt="" width="100" height="100  "> </td>
                                             <td>
                                                 <a class="btn btn-danger" href="<?= base_url('deleteevent/' . $sw['event_id']); ?>">Hapus</a>
+                                            </td>
+                                            <td>
                                                 <a class="btn btn-warning" href="<?= base_url('updateevent/' . $sw['event_id']); ?>">Edit</a>
                                             </td>
                                         </tr>

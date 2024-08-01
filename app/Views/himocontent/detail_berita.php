@@ -36,7 +36,7 @@ foreach ($page1 as $pg1) {
                                 <li style="list-style:none;"><a href=""><i class="bi bi-person-lines-fill"></i> Humas HIMOSDA </a></li>
                             </ul>
                             <h2><?= $pg['text2']; ?><h2>
-                                    <p style="color: #6c757d;"><?= $pg['text3']; ?></p>
+                                    <div style="color: #6c757d;"><?= substr($pg['text3'], 0, 150); ?></div>
                         </div>
                     <?php } ?>
                 </div>

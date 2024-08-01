@@ -27,7 +27,7 @@
                                 <div class="media-body">
                                     <!-- <span class="meta-post"></span> -->
                                     <h2 class="mt-0 mb-3"><a href=""><?= $pg['text2']; ?></a></h2>
-                                    <p style="color: #6c757d;"><?= $pg['text3']; ?></p>
+                                    <div style="color: #6c757d;"><?= substr($pg['text3'], 0, 150); ?>.....</div>
                                 </div>
                             </div>
                         </article>

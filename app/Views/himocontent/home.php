@@ -91,7 +91,7 @@ foreach ($page3 as $pg) { ?>
                         <div class="media-body">
                             <span class="meta-post"><?= $pg['text1']; ?></span>
                             <h2 class="mt-0 mb-3"><a href="<?= base_url('detailberita/' . $pg['gambar_judul']) ?>"><?= $pg['text2']; ?></a></h2>
-                            <p><?= $pg['text3']; ?></p>
+                            <div style="color: #6c757d;"><?= substr($pg['text3'], 0, 150); ?>.....</div>
                         </div>
                     </div>
 
