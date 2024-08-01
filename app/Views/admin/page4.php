@@ -49,19 +49,19 @@
                                                     <label>Title</label>
                                                     <div>
                                                         <input type="hidden" name="event_id" class="form-control floating-label" value="<?= $value['event_id']; ?>">
-                                                        <input type="text" name="text1" class="form-control floating-label" value="<?= $value['text1']; ?>">
+                                                        <input type="text" name="text1" class="form-control floating-label" value="<?= $value['text2']; ?>">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Deskripsi</label>
                                                     <div>
-                                                        <input type="text" name="text2" class="form-control floating-label" value="<?= $value['text2']; ?>">
+                                                        <textarea id="elm1" name="text3"><?= $value['text3']; ?></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Tanggal</label>
                                                     <div>
-                                                        <input type="text" name="text3" class="form-control floating-label" value="<?= $value['text3']; ?>">
+                                                        <input type="text" name="text3" class="form-control floating-label" value="<?= $value['text1']; ?>">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -74,65 +74,8 @@
                                             <button type="submit" class="btn btn-primary mr-2">Submit</button>
                                         </form>
                                     </div>
-                            <?php }
-                            }  ?>
-
-                            <?php if ($hasil != null) {
-                                foreach ($hasil as $key => $value) { ?>
-                                    <div class="p-4">
-                                        <form action="<?= base_url('aksiupdatepage4') ?>" method="post" enctype="multipart/form-data">
-                                            <div class="form-group">
-                                                <div class="form-group">
-                                                    <label>Title</label>
-                                                    <div>
-                                                        <input type="hidden" name="page4_id" class="form-control floating-label" value="<?= $value['page4_id']; ?>">
-                                                        <input type="text" name="text1" class="form-control floating-label" value="<?= $value['text1']; ?>">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Deskripsi</label>
-                                                    <div>
-                                                        <input type="text" name="text2" class="form-control floating-label" value="<?= $value['text2']; ?>">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                                        </form>
-                                    </div>
                                 <?php }
                             } else { ?>
-
-
-                                <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title mt-0" id="myModalLabel">Title Event</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <form action="<?= base_url('aksipage4') ?>" method="post" enctype="multipart/form-data">
-
-                                                    <div class="form-group">
-                                                        <label>Title</label>
-                                                        <div>
-                                                            <input type="text" name="text1" class="form-control floating-label">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <label>Deskripsi</label>
-                                                        <div>
-                                                            <input type="text" name="text2" class="form-control floating-label">
-                                                        </div>
-                                                    </div>
-
-                                                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
                                 <div id="myModalevent" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">

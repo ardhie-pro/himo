@@ -1272,7 +1272,7 @@ textarea.form-control {
 /* ____________________________________ */
 
 .blog_area a {
-  color: #666666 !important;
+  color: #000 !important;
   text-decoration: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;

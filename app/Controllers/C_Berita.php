@@ -136,7 +136,6 @@ class C_Berita extends BaseController
     }
 
     // event mesin
-    // mesin update
     public function aksiupdateevent($event_id = null)
     {
         $event_id = $this->request->getPost('event_id');
@@ -144,11 +143,11 @@ class C_Berita extends BaseController
         $text2 = $this->request->getPost('text2');
         $text3 = $this->request->getPost('text3');
         $gambar = $this->request->getFile('gambar');
-        if ($this->request->getFile('gambar')) {
-            $fileName = $gambar->getRandomName();
-            $gambar->move('IMGB/penyimpanan', $fileName);
-            $url = 'IMGB/penyimpanan/' . $fileName;
-            $data['post'] = $this->event->update(
+        $fileName = $gambar->getRandomName();
+        $gambar->move('IMGB/penyimpanan', $fileName);
+        $url = 'IMGB/penyimpanan/' . $fileName;
+        if ($this->request->getFile('berita_gambar')) {
+            $this->berita->update(
                 $event_id,
                 [
                     "text1" =>  $text1,
@@ -156,12 +155,10 @@ class C_Berita extends BaseController
                     "text3" =>  $text3,
                     "gambar" => $url,
                 ]
-
             );
             return redirect()->to(base_url('page4'));
         } else {
-
-            $data['post'] = $this->page4->update(
+            $this->event->update(
                 $event_id,
                 [
                     "text1" =>  $text1,
@@ -172,6 +169,42 @@ class C_Berita extends BaseController
             return redirect()->to(base_url('page4'));
         }
     }
+    // mesin update
+    // public function aksiupdatexevent($event_id = null)
+    // {
+    //     $event_id = $this->request->getPost('event_id');
+    //     $text1 = $this->request->getPost('text1');
+    //     $text2 = $this->request->getPost('text2');
+    //     $text3 = $this->request->getPost('text3');
+    //     $gambar = $this->request->getFile('gambar');
+    //     if ($this->request->getFile('gambar')) {
+    //         $fileName = $gambar->getRandomName();
+    //         $gambar->move('IMGB/penyimpanan', $fileName);
+    //         $url = 'IMGB/penyimpanan/' . $fileName;
+    //         $data['post'] = $this->event->update(
+    //             $event_id,
+    //             [
+    //                 "text1" =>  $text1,
+    //                 "text2" =>  $text2,
+    //                 "text3" =>  $text3,
+    //                 "gambar" => $url,
+    //             ]
+
+    //         );
+    //         return redirect()->to(base_url('page4'));
+    //     } else {
+
+    //         $data['post'] = $this->page4->update(
+    //             $event_id,
+    //             [
+    //                 "text1" =>  $text1,
+    //                 "text2" =>  $text2,
+    //                 "text3" =>  $text3,
+    //             ]
+    //         );
+    //         return redirect()->to(base_url('page4'));
+    //     }
+    // }
 
     public function deletepage4($page4_id = null)
     {
