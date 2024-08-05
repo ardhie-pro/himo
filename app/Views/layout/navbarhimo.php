@@ -18,8 +18,10 @@
                             <div class="row full-height align-items-center">
                                 <div class="col-md-6rounded-circle mx-auto">
                                     <ul class="list-unstyled menu">
-                                        <li class="active"><a href="index.html">Home</a></li>
-                                        <li><a href="about.html">About</a></li>
+                                        <li class="active"><a href="<?= base_url('/') ?>">Home</a></li>
+                                        <li><a href="<?= base_url('about') ?>">About</a></li>
+                                        <li><a href="<?= base_url('berita') ?>">Berita</a></li>
+                                        <li><a href="<?= base_url('galeri') ?>">Galeri</a></li>
                                     </ul>
                                 </div>
                             </div>

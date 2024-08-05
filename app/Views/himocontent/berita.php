@@ -2,6 +2,29 @@
 
 <?= $this->section('contenthimo'); ?>
 
+
+<section class="site-hero inner-page overlay" style="background-image: url(images/IMG_8981.jpg)" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row site-hero-inner justify-content-center align-items-center">
+            <div class="col-md-10 text-center" data-aos="fade">
+                <h1 class="heading mb-3">Berita</h1>
+                <ul class="custom-breadcrumbs mb-4">
+                    <li><a href="<?= base_url('/') ?>">Halaman Utama</a></li>
+                    <li>&bullet;</li>
+                    <li>Berita</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <a class="mouse smoothscroll" href="#next">
+        <div class="mouse-icon">
+            <span class="mouse-wheel"></span>
+        </div>
+    </a>
+</section>
+<!-- END section -->
+
 <section class="blog_area section-padding">
     <div class="container">
         <div class="row">
@@ -27,7 +50,9 @@
                                 <div class="media-body">
                                     <!-- <span class="meta-post"></span> -->
                                     <h2 class="mt-0 mb-3"><a href=""><?= $pg['text2']; ?></a></h2>
-                                    <div style="color: #6c757d;"><?= substr($pg['text3'], 0, 150); ?>.....</div>
+                                    <div class="row brt-uyy">
+                                        <p><?= substr($pg['text3'], 0, 150); ?>.....</p>
+                                    </div>
                                 </div>
                             </div>
                         </article>

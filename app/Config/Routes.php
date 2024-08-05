@@ -57,6 +57,9 @@ $routes->get('/gambar', 'C_Page::gambar');
 $routes->post('/aksigambar', 'C_Page::aksigambar');
 $routes->get('/deletegambar/(:any)', 'C_Page::deletegambar/$1');
 
+// galei
+$routes->get('/galeri', 'C_Galeri::galeri');
+
 // user management
 $routes->get('/tambahuser', 'C_User::tambahuser');
 $routes->post('/aksiuser', 'C_User::aksiuser');

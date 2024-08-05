@@ -1,6 +1,7 @@
 <?= $this->extend('layout/himotemp'); ?>
 
 <?= $this->section('contenthimo'); ?>
+
 <?php
 foreach ($page1 as $pg) {
 ?>
@@ -84,18 +85,18 @@ foreach ($page3 as $pg) { ?>
         <div class="row">
             <?php
             foreach ($event as $pg) { ?>
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="100">
-
-                    <div class="media media-custom d-block mb-4 h-100">
-                        <a href="<?= base_url('detailberita/' . $pg['gambar_judul']) ?>" class="mb-4 d-block"><img src="<?= base_url($pg['gambar']); ?>" alt="Image placeholder" class="img-fluid"></a>
-                        <div class="media-body">
-                            <span class="meta-post"><?= $pg['text1']; ?></span>
-                            <h2 class="mt-0 mb-3"><a href="<?= base_url('detailberita/' . $pg['gambar_judul']) ?>"><?= $pg['text2']; ?></a></h2>
-                            <div style="color: #6c757d;"><?= substr($pg['text3'], 0, 150); ?>.....</div>
+                <a href="<?= base_url('detailberita/' . $pg['gambar_judul']) ?>" class="mb-4 d-block">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="100">
+                        <div class="media media-custom d-block mb-4 h-100">
+                            <a href="<?= base_url('detailberita/' . $pg['gambar_judul']) ?>" class="mb-4 d-block"><img src="<?= base_url($pg['gambar']); ?>" alt="Image placeholder" class="img-fluid"></a>
+                            <div class="media-body">
+                                <span class="meta-post"><?= $pg['text1']; ?></span>
+                                <h2 class="mt-0 mb-3" style="text-decoration:none;"><a href="<?= base_url('detailberita/' . $pg['gambar_judul']) ?>"><?= $pg['text2']; ?></a></h2>
+                                <div style="color: #6c757d;"><?= substr($pg['text3'], 0, 150); ?></div>
+                            </div>
                         </div>
                     </div>
-
-                </div>
+                </a>
             <?php } ?>
             <!-- <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="200">
                 <div class="media media-custom d-block mb-4 h-100">
@@ -137,7 +138,7 @@ foreach ($page3 as $pg) { ?>
                     foreach ($gambar as $pg) {
                     ?>
                         <div class="slider-item">
-                            <a href="" data-fancybox="images" data-caption="Caption for this image"><img src="<?= base_url($pg['gambar']) ?>" style="max-width: 400px" alt="Image placeholder" class="img-fluid"></a>
+                            <a href="<?= base_url('galeri') ?>" data-fancybox="images" data-caption="Caption for this image"><img src="<?= base_url($pg['gambar']) ?>" alt="Image placeholder" class="img-fluid"></a>
                         </div>
                     <?php } ?>
                     <!-- <div class="slider-item">
@@ -194,6 +195,13 @@ foreach ($page3 as $pg) { ?>
                                 <p class="text-white text-opacity-7">(descripsi)Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            <div class="food-menu mb-5">
+                                <span class="d-block text-primary h4 mb-3">tanggal(17 june 2007)</span>
+                                <h3 class="text-white"><a href="#" class="text-white">(Judul) tanggal lahir web developer</a></h3>
+                                <p class="text-white text-opacity-7">(descripsi)Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            </div>
+                        </div>
                     </div>
 
 
@@ -208,10 +216,24 @@ foreach ($page3 as $pg) { ?>
                                 <p class="text-white text-opacity-7">(descripsi)Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            <div class="food-menu mb-5">
+                                <span class="d-block text-primary h4 mb-3">tanggal(17 june 2007)</span>
+                                <h3 class="text-white"><a href="#" class="text-white">(Judul) tanggal lahir web developer</a></h3>
+                                <p class="text-white text-opacity-7">(descripsi)Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            </div>
+                        </div>
                     </div>
                 </div> <!-- .tab-pane -->
                 <div class="tab-pane fade text-left" id="tahunan" role="tabpanel" aria-labelledby="tahunan-tab">
                     <div class="row">
+                        <div class="col-md-6">
+                            <div class="food-menu mb-5">
+                                <span class="d-block text-primary h4 mb-3">tanggal(17 june 2007)</span>
+                                <h3 class="text-white"><a href="#" class="text-white">(Judul) tanggal lahir web developer</a></h3>
+                                <p class="text-white text-opacity-7">(descripsi)Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            </div>
+                        </div>
                         <div class="col-md-6">
                             <div class="food-menu mb-5">
                                 <span class="d-block text-primary h4 mb-3">tanggal(17 june 2007)</span>

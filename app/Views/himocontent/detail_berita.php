@@ -2,22 +2,30 @@
 
 <?= $this->section('contenthimo'); ?>
 
-<?php
-foreach ($page1 as $pg1) {
-?>
-    <section class="site-hero overlay" style="background-image: url(<?= base_url($pg1['gambar']); ?>);" data-stellar-background-ratio="0.5">
-        <div class="container">
-            <div class="row site-hero-inner justify-content-center align-items-center">
-                <div class="col-md-10 text-center" data-aos="fade-up">
-                    <span class="custom-caption text-uppercase text-white d-block  mb-3"><?= $pg1['text1']; ?><span class="text-primary"></span>DI HIMOSDA</span>
-                    <h1 class="heading"><?= $pg1['text2']; ?></h1>
-                </div>
+<section class="site-hero inner-page overlay" style="background-image: url(images/IMG_8981.jpg)" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row site-hero-inner justify-content-center align-items-center">
+            <div class="col-md-10 text-center" data-aos="fade">
+                <h1 class="heading mb-3">Berita</h1>
+                <ul class="custom-breadcrumbs mb-4">
+                    <li><a href="">Judul Berita</a></li>
+                    <li>:</li>
+                    <?php
+                    foreach ($event as $pg) { ?>
+                        <li><?= $pg['text2']; ?></li>
+                    <?php } ?>
+                </ul>
             </div>
         </div>
+    </div>
 
-
-    </section>
-<?php } ?>
+    <a class="mouse smoothscroll" href="#next">
+        <div class="mouse-icon">
+            <span class="mouse-wheel"></span>
+        </div>
+    </a>
+</section>
+<!-- END section -->
 
 <section class="blog_area single-post-area section-padding">
     <div class="container">

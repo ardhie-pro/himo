@@ -9,7 +9,7 @@
             <div class="col-md-10 text-center" data-aos="fade">
                 <h1 class="heading mb-3">About Us</h1>
                 <ul class="custom-breadcrumbs mb-4">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="<?= base_url('/') ?>">Home</a></li>
                     <li>&bullet;</li>
                     <li>About</li>
                 </ul>
